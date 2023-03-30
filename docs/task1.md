@@ -31,17 +31,31 @@ Two json files will be added in your folder.
 $ npm install ejs
 ```
 
-???+ success
+???+ Success
+    EJS have already installed in your computer. But there will be no file added, just some packages.
 
+<<<<<<< HEAD
 EJS have already installed in your computer. But there will be no file added, just some packages.
+=======
+## How to start with EJS
+>>>>>>> c427e346e913a14f3e4a414dcb3aee7008d363cc
 
-### how to make a simple ejs file
+To start with the ejs first we need to set our app to use it. We can simply add this using app.
+```py
+set('view engine', 'ejs')
+```
 
+<<<<<<< HEAD
 The EJS file is similar with HTML.
 click [HTML](https://www.w3schools.com/html/) to know what it is.
+=======
+???+ Info
+    This app.set('view engine', 'ejs') will look into views folder on the same path. So we need to create views folder for writing those frontend templates.
 
-<!-- Simple EJS file example:
+>>>>>>> c427e346e913a14f3e4a414dcb3aee7008d363cc
 
+
+<<<<<<< HEAD
 ```py
   <!DOCTYPE html>
 <html>
@@ -54,6 +68,8 @@ click [HTML](https://www.w3schools.com/html/) to know what it is.
   </body>
 </html>
 ``` -->
+=======
+>>>>>>> c427e346e913a14f3e4a414dcb3aee7008d363cc
 
 ???+ Tips
 Use EJS tags to embed JavaScript code into your HTML code
@@ -74,4 +90,8 @@ Use EJS tags to embed JavaScript code into your HTML code
 | `_%>` | Whitespace Slurping' ending tag, removes all whitespace after it    |
 
 ???+ Info
+<<<<<<< HEAD
 Help you understand what are tags and how they work.
+=======
+    Help understand what are tags and how they work. 
+>>>>>>> c427e346e913a14f3e4a414dcb3aee7008d363cc

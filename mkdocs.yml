@@ -8,9 +8,6 @@ nav:
   - Glossary: "Glossary.md"
   - Troubleshooting Guide: "Troubleshoot-guide.md"
   
-  # - Creating Login Form: "pages/login-form.md"
-  # - Using passport-local: "pages/using-passport-local.md"
-  # - Logging in: "pages/logging-in.md"
 
 markdown_extensions:
   - toc:

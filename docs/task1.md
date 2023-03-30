@@ -6,12 +6,22 @@
 
 Click [Download Node.js](https://nodejs.org/en) to download. 
 
-* A package.json file should be created using this command 
-``` py 
-$ npm init or npm i
-```
+* Vs Code should be installed on your computer.
+
+Click [Download VS Code](https://code.visualstudio.com/) to download. 
 
 ## Installation 
+ A package.json file should be created using this command 
+``` py 
+$ npm install or npm i
+```
+
+
+  ![npm i](/images/image2.png)
+
+  Two json files will be added in your folder.
+  
+
 * Open the VS Code terminal and navigate to the project directory.
 
 ``` py
@@ -20,7 +30,7 @@ $ npm install ejs
 
 ???+ success
 
-    You have already have install EJS in your computer.
+   EJS have already installed in your computer. But there will be no file added, just some packages.
 
 ### how to make a simple ejs file
 

@@ -1,6 +1,6 @@
 # Introduction
 
-Greetings! This EJS User Documentation aims to provide you with a concise yet informative **introduction to EJS** and its **advantages when it comes to creating dynamic web applications**. Whether you are just starting out, rest assured that this documentation will assist you in gaining a better understanding of EJS.
+👋Greetings! This EJS User Documentation aims to provide you with a concise yet informative **introduction to EJS** and its **advantages when it comes to creating dynamic web applications**. Whether you are just starting out, rest assured that this documentation will assist you in gaining a better understanding of EJS.
 
 > **What is [EJS](https://ejs.co/)?**
 
@@ -37,7 +37,7 @@ This documentation assumes the following:
 
 ## Procedures Overview
 
-- **[Intalling EJS](http://127.0.0.1:8000/task1/)**
+- **[EJS Installation](http://127.0.0.1:8000/task1/)**
   > This section guides you through the process of installing EJS on your local machine. The steps include checking for prerequisites such as having Node.js installed and creating a package.json file using the npm init command. Then, you will be instructed to run the command 'npm install ejs --save' in the project directory using the terminal.
 - **[Creating EJS templates](http://127.0.0.1:8000/task2/)**
   > This task explains how to create EJS templates and embed dynamic content within them. The process involves creating a new file with the .ejs extension in the views directory, adding basic HTML markup, using <%= %> tags to embed EJS code in the HTML markup, and passing dynamic data from the server to the EJS template using the res.render() method.

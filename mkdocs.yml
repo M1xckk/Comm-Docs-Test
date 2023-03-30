@@ -1,0 +1,70 @@
+site_name: EJS Beginner Guide
+
+nav:
+  - Home: "index.md"
+  - Installing EJS: "task1.md"
+  - Creating EJS templates: "task2.md"
+  - Conditional statements in EJS templates: "task3.md"
+  - Glossary: "Glossary.md"
+  - Troubleshooting Guide: "Troubleshoot-guide.md"
+  
+  # - Creating Login Form: "pages/login-form.md"
+  # - Using passport-local: "pages/using-passport-local.md"
+  # - Logging in: "pages/logging-in.md"
+
+markdown_extensions:
+  - toc:
+      toc_depth: 3
+  - attr_list
+  - footnotes
+  - admonition
+  - codehilite
+  - def_list
+  - tables
+  - pymdownx.highlight:
+      anchor_linenums: true
+      line_spans: __span
+      pygments_lang_class: true
+  - pymdownx.emoji:
+      emoji_index: !!python/name:materialx.emoji.twemoji
+      emoji_generator: !!python/name:materialx.emoji.to_svg
+  - pymdownx.tabbed:
+      alternate_style: true
+  - pymdownx.inlinehilite
+  - pymdownx.snippets
+  - pymdownx.superfences
+  - pymdownx.details
+
+theme:
+  name: material
+
+  features:
+    - navigation.footer
+    - navigation.sections
+    - navigation.top
+    - toc.integrate
+    - content.code.copy
+    - content.code.annotate
+
+  palette:
+    - media: "(prefers-color-scheme: light)"
+      scheme: default
+      primary: blue grey
+      accent: deep purple
+      toggle:
+        icon: material/weather-sunny
+        name: Switch to dark mode
+
+    - media: "(prefers-color-scheme: dark)"
+      scheme: slate
+      primary: red
+      accent: red
+      toggle:
+        icon: material/weather-night
+        name: Switch to light mode
+
+plugins:
+  - search:
+      lang: en
+
+copyright: Copyright &copy; 2023  Brian Xu & Selina Park

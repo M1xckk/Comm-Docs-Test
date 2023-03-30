@@ -28,33 +28,21 @@ $ npm install or npm i
 $ npm install ejs
 ```
 
-???+ success
+???+ Success
+    EJS have already installed in your computer. But there will be no file added, just some packages.
 
-   EJS have already installed in your computer. But there will be no file added, just some packages.
+## How to start with EJS
 
-### how to make a simple ejs file
+To start with the ejs first we need to set our app to use it. We can simply add this using app.
+```py
+set('view engine', 'ejs')
+```
 
-The EJS file is similar with HTML. 
- click [HTML](https://www.w3schools.com/html/) to know what it is.
+???+ Info
+    This app.set('view engine', 'ejs') will look into views folder on the same path. So we need to create views folder for writing those frontend templates.
 
 
-<!-- Simple EJS file example:
 
-```py 
-  <!DOCTYPE html>
-<html>
-  <head>
-    <title>My EJS Page</title>
-  </head>
-  <body>
-    <h1>Hello, <%= name %>!</h1>
-    <p>Today is <%= date %>.</p>
-  </body>
-</html>
-``` -->
- 
-???+ Tips 
-    Use EJS tags to embed JavaScript code into your HTML code
 
 
 ### EJS Tags
@@ -72,4 +60,4 @@ The EJS file is similar with HTML.
 |    `_%>`    | Whitespace Slurping' ending tag, removes all whitespace after it |
 
 ???+ Info
-    Help you understand what are tags and how they work. 
+    Help understand what are tags and how they work. 

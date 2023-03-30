@@ -1,6 +1,6 @@
 # Creating EJS templates
 
-Before introduce the EJS templates, there are some stuff need to know
+Before introducing the EJS templates, there are some stuff need to know
 
 ## CLI 
 CLI is a command line program that accepts text input to execute operating system functions.

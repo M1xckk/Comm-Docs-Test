@@ -14,16 +14,28 @@ By the end of this section, beginners will have a solid understanding of the sof
 
 ## Installation Steps for EJS
 
-1. Open your command prompt or terminal.
-2. In your terminal, type "npm install ejs" and hit enter.
+At this point, you should have Node.js and VS Code installed on your local computer.
+
+1. Create a new project directory.
+
+   1. <font size = "2"> Create a new directory for your project in a convenient location. You can do this from the terminal (or command prompt) using the "mkdir". </font>
+   2. <font size = "2"> For example, type "mkdir my-ejs-project" to create a new directory called "my-ejs-project" </font>
+
+2. Navigate to the project directory.
+
+   1. <font size = "2">Navigate to the project directory by typing "cd my-ejs-project" (or whatever you named your directory) in the terminal.</font>
+
+3.
+
+4. **npm Installation**: In your terminal, type "npm install" and hit enter.
 
 ```py
-$ npm install ejs
+$ npm install
 ```
 
 ![npm i](/images/image2.png)
 
-Two json files will be added in your folder.
+This command will add two json files (Javascript Ojbect) in your folder.
 
 - Open the VS Code terminal and navigate to the project directory.
 

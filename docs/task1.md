@@ -33,7 +33,7 @@ At this point, you should have Node.js and VS Code installed on your local compu
 $ npm install
 ```
 
-![npm i](/images/image2.png)
+![npm i](/images/image2.png "these are json files")
 
 This command will add two json files (Javascript Ojbect) in your folder.
 
@@ -44,7 +44,7 @@ $ npm install ejs
 ```
 
 ???+ Success
-EJS have already installed in your computer. But there will be no file added, just some packages.
+    EJS have already installed in your computer. But there will be no file added, just some packages.
 
 ## How to start with EJS
 
@@ -55,12 +55,12 @@ set('view engine', 'ejs')
 ```
 
 ???+ Info
-This app.set('view engine', 'ejs') will look into views folder on the same path. So we need to create views folder for writing those frontend templates.
+    This app.set('view engine', 'ejs') will look into views folder on the same path. So we need to create views folder for writing those frontend templates.
 
 ???+ Tips
-Use EJS tags to embed JavaScript code into your HTML code
+    Use EJS tags to embed JavaScript code into your HTML code
 
-### EJS Tags
+## EJS Tags
 
 | Tag   | Description                                                         |
 | ----- | ------------------------------------------------------------------- |
@@ -76,4 +76,4 @@ Use EJS tags to embed JavaScript code into your HTML code
 | `_%>` | Whitespace Slurping' ending tag, removes all whitespace after it    |
 
 ???+ Info
-Help understand what are tags and how they work.
+    Help understand what are tags and how they work.

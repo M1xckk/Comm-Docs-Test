@@ -14,37 +14,33 @@ By the end of this section, beginners will have a solid understanding of the sof
 
 ## Installation Steps for EJS
 
+Follow these steps to install EJS.
 At this point, you should have Node.js and VS Code installed on your local computer.
 
 1. Create a new project directory.
-
-   1. <font size = "2"> Create a new directory for your project in a convenient location. You can do this from the terminal (or command prompt) using the "mkdir". </font>
-   2. <font size = "2"> For example, type "mkdir my-ejs-project" to create a new directory called "my-ejs-project" </font>
-
+      1. Open your terminal or command prompt.
+      2. Create a new directory for your project by entering the following command:
+   ```
+   mkdir my-ejs-project
+   ```
 2. Navigate to the project directory.
-
-   1. <font size = "2">Navigate to the project directory by typing "cd my-ejs-project" (or whatever you named your directory) in the terminal.</font>
-
-3.
-
-4. **npm Installation**: In your terminal, type "npm install" and hit enter.
-
-```py
-$ npm install
-```
-
+      1. Navigate to the project directory by entering the following command in the terminal. 
+   ```
+   cd my-ejs-proejct
+   ```
+3. Initialize the project.
+      1. Initialize the porject with npm by entering the following command in the terminal/
+      2. This will create a "package.json" and "package-lock.json" file in the project directory. 
+   ```
+   npm init
+   ```
 ![npm i](/images/image2.png "these are json files")
-
-This command will add two json files (Javascript Ojbect) in your folder.
-
-- Open the VS Code terminal and navigate to the project directory.
-
-```py
-$ npm install ejs
-```
-
-???+ Success
-    EJS have already installed in your computer. But there will be no file added, just some packages.
+4. Install EJS using npm. 
+      1. Enter the following command in the terminal.
+      2. This command will install EJS and add it to the "dependencies" section of the "package.json" file. 
+   ```
+   npm install ejs 
+   ```
 
 ## How to start with EJS
 
@@ -54,11 +50,13 @@ To start with the ejs first we need to set our app to use it. We can simply add 
 set('view engine', 'ejs')
 ```
 
+This code will tell yur app to use EJS as the view engine. 
+
 ???+ Info
-    This app.set('view engine', 'ejs') will look into views folder on the same path. So we need to create views folder for writing those frontend templates.
+This app.set('view engine', 'ejs') will look into views folder on the same path. So we need to create views folder for writing those frontend templates.
 
 ???+ Tips
-    Use EJS tags to embed JavaScript code into your HTML code
+Use EJS tags to embed JavaScript code into your HTML code
 
 ## EJS Tags
 
@@ -76,4 +74,4 @@ set('view engine', 'ejs')
 | `_%>` | Whitespace Slurping' ending tag, removes all whitespace after it    |
 
 ???+ Info
-    Help understand what are tags and how they work.
+      It is recommended that you familiarize yourself with these tags before starting to use EJS.

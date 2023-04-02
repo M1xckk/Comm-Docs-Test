@@ -26,7 +26,7 @@ At this point, you should have Node.js and VS Code installed on your local compu
 2. Navigate to the project directory.
       1. Navigate to the project directory by entering the following command in the terminal. 
    ```
-   cd my-ejs-proejct
+   cd my-ejs-project
    ```
 3. Initialize the project.
       1. Initialize the porject with npm by entering the following command in the terminal/
@@ -35,11 +35,11 @@ At this point, you should have Node.js and VS Code installed on your local compu
    npm init
    ```
 ![npm i](/images/image2.png "these are json files")
-4. Install EJS using npm. 
+4. Install  Express and EJS using npm. 
       1. Enter the following command in the terminal.
-      2. This command will install EJS and add it to the "dependencies" section of the "package.json" file. 
+      2. This command will install Express and EJS and add it to the "dependencies" section of the "package.json" file. 
    ```
-   npm install ejs 
+   npm install express ejs 
    ```
 
 ## How to start with EJS

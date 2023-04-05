@@ -51,7 +51,7 @@ In this template, there will be three EJS expressions:
 - <%= message %> will display the value of the message variable.
 
 ???+Success
-You have created a basic EJS template. You can now use this template to generate HTML markup with plain JavaScript.
+    You have created a basic EJS template. You can now use this template to generate HTML markup with plain JavaScript.
 
 ## Create Data to Pass to the Template
 

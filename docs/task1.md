@@ -53,10 +53,10 @@ set('view engine', 'ejs')
 This code will tell yur app to use EJS as the view engine. 
 
 ???+ Info
-This app.set('view engine', 'ejs') will look into views folder on the same path. So we need to create views folder for writing those frontend templates.
+      This app.set('view engine', 'ejs') will look into views folder on the same path. So we need to create views folder for writing those frontend templates.
 
 ???+ Tips
-Use EJS tags to embed JavaScript code into your HTML code
+      Use EJS tags to embed JavaScript code into your HTML code
 
 ## EJS Tags
 

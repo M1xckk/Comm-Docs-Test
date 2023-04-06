@@ -19,44 +19,72 @@ At this point, you should have Node.js and VS Code installed on your local compu
 
 1. Create a new project directory.
       1. Open your terminal or command prompt.
-      2. Create a new directory for your project by entering the following command:
+      2. Move to your desktop!
+   ```py
+   cd Desktop
    ```
+      3. Create a new directory for your project by entering the following command:
+   ```py
    mkdir my-ejs-project
    ```
-2. Navigate to the project directory.
-      1. Navigate to the project directory by entering the following command in the terminal. 
-   ```
+2. In your same terminal, navigate to the project directory.
+      1. Navigate to the project directory by entering the following command in the terminal.
+   ```py
    cd my-ejs-project
    ```
-3. Initialize the project.
-      1. Initialize the porject with npm by entering the following command in the terminal/
-      2. This will create a "package.json" and "package-lock.json" file in the project directory. 
+3. Initialize a new Node.js project.
+      1. In the terminal, run the following command to open your project directory in "Visual Studio Code"
+   ```py
+   code .
    ```
+      2. Once the "Visual Studio Code" is opened, open the console by pressing **ctrl+J** (Windows) or **BRIAN HERE** (Mac) to open the console.
+      3. Use the following command to install EJS using npm (Node Package Manager) in the console. This will create a "package.json" and "package-lock.json" file in the project directory.
+   ```py
    npm init
    ```
-![npm i](images/image2.png)
-4. Install  Express and EJS using npm. 
-      1. Enter the following command in the terminal.
-      2. This command will install Express and EJS and add it to the "dependencies" section of the "package.json" file. 
-   ```
-   npm install express ejs 
-   ```
+      4. You can accept the default values for most of the prompts, or customize them as needed.
 
-## How to start with EJS
+      ![npm i](images/image2.png) 
 
-To start with the ejs first we need to set our app to use it. We can simply add this using app.
+4. Install Express module. 
+      1. Enter the following command in the terminal. 
+      2. This will install Express as a dependency for your project.
+      ```py
+      npm install express
+      ```
+5. Install EJS module. 
+      1. Enter the following command in the terminal. 
+      2. This will install EJS as a dependency for your project.
+      ```py
+      npm install ejs 
+      ```
+6. Create a new file in you project directory named "app.js". 
+      1. This will serve as the main entry point for your application. 
+7. Open "app.js" in your Visual Code Studio. 
+8. Require the "express" module by adding the following line to the top of your "app.js".
+      ``` py
+      const express = require(`express`);
+      ``` 
+9. Create an instance of the Express application by adding the following line in your "app.js".
+      ```py
+      const app = exprees();
+      ``` 
+10. Set the view engine to EJS by adding the following line in your "app.js".
+      ``` py
+      app.set(`view engine`,  `ejs`);
+      ``` 
+11. Create a route for your application by adding the following lines: 
+      1. This route will render a file named "index.ejs" located in the "views" directory. Now let's create this file!
+      ```py
+      app.get('/', (req, res) => {
+            res.render('index');
+      });
+      ```
+12. Create a "views" directory in your project directory. 
+13. Creae a new file in the "views" directory named "index.ejs".
 
-```py
-set('view engine', 'ejs')
-```
-
-This code will tell yur app to use EJS as the view engine. 
-
-???+ Info
-      This app.set('view engine', 'ejs') will look into views folder on the same path. So we need to create views folder for writing those frontend templates.
-
-???+ Tips
-      Use EJS tags to embed JavaScript code into your HTML code
+???+Suceess
+Now you are ready to explore the dynamics of EJS!
 
 ## EJS Tags
 

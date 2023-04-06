@@ -34,7 +34,7 @@ At this point, you should have Node.js and VS Code installed on your local compu
    ```
    npm init
    ```
-![npm i](/docs/images/image2.png)
+![npm i]("/image2.png")
 4. Install  Express and EJS using npm. 
       1. Enter the following command in the terminal.
       2. This command will install Express and EJS and add it to the "dependencies" section of the "package.json" file. 

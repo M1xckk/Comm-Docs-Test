@@ -1,17 +1,53 @@
-* EJS: Embedded JavaScript is a template engine that enables developers to create HTML files using JavaScript syntax.
+# Glossary
 
-* Template Engine: A software component that is used to generate HTML dynamically by replacing placeholders in a template file with actual data.
+* HTML (Hypertext Markup Language)
+> Markup language used to create the structure and content of web pages.
 
-* Placeholder: A code snippet that is used to represent dynamic data in a template file. In EJS, placeholders are written using <% %> syntax.
+* CSS (Cascading Style Sheets)
+> A stylesheet language used to add style and formatting to HTML documents.
 
-* Variable: A placeholder that is used to store dynamic data in JavaScript. In EJS, variables are written using <%= %> syntax.
+* JavaScript
+> A programming language used to add interactivity and dynamic behavior to web pages.
 
-* Control Flow: The logic that controls the flow of execution in a program. In EJS, control flow statements like if-else and for loops can be used to generate dynamic HTML.
+* Node.js
+> An open-source, cross-platform JavaScript runtime environment that executes JavaScript code outside of a web browser.
 
-* Partials: A reusable component of a web page that can be included in multiple pages. In EJS, partials are defined using <% include %> syntax.
+* Express
+> A popular Node.js web application framework used for building web applications and APIs.
 
-* Express: A popular web framework for Node.js that provides a simple way to build web applications. EJS can be integrated with Express to create dynamic HTML pages.
+* EJS (Embedded JavaScript)
+> A templating language that allows you to generate HTML markup with JavaScript.
 
-???+ Info
-      Including a glossary can be helpful for readers who may not have a strong background in web development or programming.
+* Template
+> A pre-designed file or layout that serves as a starting point for creating web pages or documents.
+
+* Variable
+> A container that holds a value, such as a number or string, that can be accessed and manipulated throughout a program.
+
+* Function
+> A block of code that performs a specific task and can be called or executed from other parts of the program.
+
+* Control flow
+> The order in which statements and instructions are executed in a program.
+
+* Conditional statement
+> A programming construct that executes different code based on whether a certain condition is true or false.
+
+* If statement
+> A type of conditional statement that executes code if a specified condition is true.
+
+* Else statement
+> A type of conditional statement that executes code if the specified condition in an if statement is false.
+
+* Else-if statement
+> A type of conditional statement that checks multiple conditions and executes different code depending on which condition is true.
+
+* Dynamic content
+> Content that changes based on the state of an application or user input.
+
+* Placeholder
+> A code snippet that is used to represent dynamic data in a template file. In EJS, placeholders are written using <% %> syntax.
+
+* Partials
+> A reusable component of a web page that can be included in multiple pages. In EJS, partials are defined using <% include %> syntax.
 

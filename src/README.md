@@ -39,3 +39,5 @@ EJS is a powerful templating engine that allows you to generate dynamic HTML mar
 - Integrates seamlessly with Node.js and other popular web frameworks, making it a popular choice for building web applications and APIs
 - Allows you to create reusable templates that can be used across multiple pages, saving you time and effort
   Overall, EJS is a powerful tool that can help you build dynamic web pages quickly and easily. We hope this documentation will help you learn how to use EJS effectively and take your web development skills to the next level!
+
+// Brian did the task1, task3 and troubleshooting , Selina did index, task2 and glossary. 

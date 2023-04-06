@@ -36,7 +36,7 @@ markdown_extensions:
 
 theme:
   name: material
-  logo: /images/image3.png
+  logo: images/image3.png
 
   features:
     - navigation.footer

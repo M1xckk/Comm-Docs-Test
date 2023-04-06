@@ -9,17 +9,17 @@
       
       
       
-        <link rel="prev" href="../task1/">
+        <link rel="prev" href="../task2/">
       
       
-        <link rel="next" href="../task3/">
+        <link rel="next" href="../Glossary/">
       
       <link rel="icon" href="../assets/images/favicon.png">
       <meta name="generator" content="mkdocs-1.4.2, mkdocs-material-9.1.3">
     
     
       
-        <title>Creating EJS templates - EJS Beginner Guide</title>
+        <title>Conditional statements in EJS templates - EJS Beginner Guide</title>
       
     
     
@@ -71,7 +71,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#creating-a-basic-ejs-templates" class="md-skip">
+        <a href="#conditional-statements-in-ejs-templates" class="md-skip">
           Skip to content
         </a>
       
@@ -89,7 +89,7 @@
   <nav class="md-header__inner md-grid" aria-label="Header">
     <a href=".." title="EJS Beginner Guide" class="md-header__button md-logo" aria-label="EJS Beginner Guide" data-md-component="logo">
       
-  <img src="../images/image3.png" alt="logo">
+  <img src="/images/image3.png" alt="logo">
 
     </a>
     <label class="md-header__button md-icon" for="__drawer">
@@ -105,7 +105,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Creating EJS templates
+              Conditional statements in EJS templates
             
           </span>
         </div>
@@ -194,7 +194,7 @@
   <label class="md-nav__title" for="__drawer">
     <a href=".." title="EJS Beginner Guide" class="md-nav__button md-logo" aria-label="EJS Beginner Guide" data-md-component="logo">
       
-  <img src="../images/image3.png" alt="logo">
+  <img src="/images/image3.png" alt="logo">
 
     </a>
     EJS Beginner Guide
@@ -238,6 +238,21 @@
 
   
   
+  
+    <li class="md-nav__item">
+      <a href="../task2/" class="md-nav__link">
+        Creating EJS templates
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
     
   
   
@@ -250,12 +265,12 @@
       
       
         <label class="md-nav__link md-nav__link--active" for="__toc">
-          Creating EJS templates
+          Conditional statements in EJS templates
           <span class="md-nav__icon md-icon"></span>
         </label>
       
       <a href="./" class="md-nav__link md-nav__link--active">
-        Creating EJS templates
+        Conditional statements in EJS templates
       </a>
       
         
@@ -274,43 +289,22 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#what-is-cli" class="md-nav__link">
-    What is CLI?
+  <a href="#if-statement" class="md-nav__link">
+    If statement
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#create-a-basic-ejs-template" class="md-nav__link">
-    Create a basic EJS template
+  <a href="#else-statement" class="md-nav__link">
+    Else statement
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#create-data-to-pass-to-the-template" class="md-nav__link">
-    Create Data to Pass to the Template
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#set-up-your-express-app" class="md-nav__link">
-    Set up your Express app
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#start-the-server" class="md-nav__link">
-    Start the server
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#outcome" class="md-nav__link">
-    Outcome
+  <a href="#else-if-statement" class="md-nav__link">
+    Else-if statement
   </a>
   
 </li>
@@ -319,21 +313,6 @@
   
 </nav>
       
-    </li>
-  
-
-    
-      
-      
-      
-
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../task3/" class="md-nav__link">
-        Conditional statements in EJS templates
-      </a>
     </li>
   
 
@@ -395,43 +374,22 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#what-is-cli" class="md-nav__link">
-    What is CLI?
+  <a href="#if-statement" class="md-nav__link">
+    If statement
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#create-a-basic-ejs-template" class="md-nav__link">
-    Create a basic EJS template
+  <a href="#else-statement" class="md-nav__link">
+    Else statement
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#create-data-to-pass-to-the-template" class="md-nav__link">
-    Create Data to Pass to the Template
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#set-up-your-express-app" class="md-nav__link">
-    Set up your Express app
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#start-the-server" class="md-nav__link">
-    Start the server
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#outcome" class="md-nav__link">
-    Outcome
+  <a href="#else-if-statement" class="md-nav__link">
+    Else-if statement
   </a>
   
 </li>
@@ -451,151 +409,51 @@
                   
 
 
-<h1 id="creating-a-basic-ejs-templates">Creating a basic EJS templates</h1>
-<details class="recap" open="open">
-<summary>Recap</summary>
-<p>If you're building a web application with Node.js and Express, EJS (Embedded JavaScript) is a powerful templating engine that you can use to generate HTML markup dynamically.</p>
-</details>
-<h2 id="what-is-cli">What is CLI?</h2>
-<p>CLI is a command line program that accepts text input to execute operating system functions.
-CLI stands for "Command Line Interface".</p>
-<table>
-<thead>
-<tr>
-<th>Species</th>
-<th>Description</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td><code>-o / --output-file FILE</code></td>
-<td>Write the rendered output to FILE rather than stdout.</td>
-</tr>
-<tr>
-<td><code>-f / --data-file FILE</code></td>
-<td>Must be JSON-formatted. Use parsed input from FILE as data for rendering.</td>
-</tr>
-<tr>
-<td><code>-i / --data-input STRING</code></td>
-<td>Must be JSON-formatted and URI-encoded. Use parsed input from STRING as data for rendering.</td>
-</tr>
-<tr>
-<td><code>-m / --delimiter CHARACTER</code></td>
-<td>Use CHARACTER with angle brackets for open/close (defaults to %).</td>
-</tr>
-<tr>
-<td><code>-p / --open-delimiter CHARACTER</code></td>
-<td>Use CHARACTER instead of left angle bracket to open.</td>
-</tr>
-<tr>
-<td><code>-c / --close-delimiter CHARACTER</code></td>
-<td>Use CHARACTER instead of right angle bracket to close.</td>
-</tr>
-<tr>
-<td><code>-s / --strict</code></td>
-<td>When set to true, generated function is in strict mode.</td>
-</tr>
-<tr>
-<td><code>-n / --no-with</code></td>
-<td>Use 'locals' object for vars rather than using with (implies --strict).</td>
-</tr>
-<tr>
-<td><code>-l / --locals-name</code></td>
-<td>Name to use for the object storing local variables when not using with.</td>
-</tr>
-<tr>
-<td><code>-w / --rm-whitespace</code></td>
-<td>Remove all safe-to-remove whitespace, including leading and trailing whitespace.</td>
-</tr>
-<tr>
-<td><code>-d / --debug</code></td>
-<td>Outputs generated function body.</td>
-</tr>
-<tr>
-<td><code>-h / --help</code></td>
-<td>Display this help message.</td>
-</tr>
-<tr>
-<td><code>-V/v / --version</code></td>
-<td>Display the EJS version.</td>
-</tr>
-</tbody>
-</table>
-<h2 id="create-a-basic-ejs-template">Create a basic EJS template</h2>
-<ol>
-<li>Create a a new folder called "views".</li>
-<li>Inside of your "views" folder, create a new file in your project directory called index.ejs.</li>
-</ol>
-<p>This file will contain your EJS template. Here's an example of a simple EJS template:</p>
-<div class="language-text highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>  &lt;!DOCTYPE html&gt;
-</span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>&lt;html&gt;
-</span><span id="__span-0-3"><a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a>  &lt;head&gt;
-</span><span id="__span-0-4"><a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a>    &lt;title&gt;&lt;%= title %&gt;&lt;/title&gt;
-</span><span id="__span-0-5"><a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a>  &lt;/head&gt;
-</span><span id="__span-0-6"><a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a>  &lt;body&gt;
-</span><span id="__span-0-7"><a id="__codelineno-0-7" name="__codelineno-0-7" href="#__codelineno-0-7"></a>    &lt;h1&gt;&lt;%= heading %&gt;&lt;/h1&gt;
-</span><span id="__span-0-8"><a id="__codelineno-0-8" name="__codelineno-0-8" href="#__codelineno-0-8"></a>    &lt;p&gt;&lt;%= message %&gt;&lt;/p&gt;
-</span><span id="__span-0-9"><a id="__codelineno-0-9" name="__codelineno-0-9" href="#__codelineno-0-9"></a>  &lt;/body&gt;
-</span><span id="__span-0-10"><a id="__codelineno-0-10" name="__codelineno-0-10" href="#__codelineno-0-10"></a>&lt;/html&gt;
+<h1 id="conditional-statements-in-ejs-templates">Conditional statements in EJS templates</h1>
+<h2 id="if-statement">If statement</h2>
+<p>Exapmle:</p>
+<div class="language-py highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="o">&lt;%</span> <span class="k">if</span> <span class="p">(</span><span class="n">loggedIn</span><span class="p">)</span> <span class="p">{</span> <span class="o">%&gt;</span>
+</span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>  <span class="o">&lt;</span><span class="n">p</span><span class="o">&gt;</span><span class="n">Welcome</span> <span class="n">back</span><span class="p">,</span> <span class="o">&lt;%=</span> <span class="n">username</span> <span class="o">%&gt;</span><span class="err">!</span><span class="o">&lt;/</span><span class="n">p</span><span class="o">&gt;</span>
 </span></code></pre></div>
-<p>In this template, there will be three EJS expressions:</p>
-<ul>
-<li>&lt;%= title %&gt; will display the value of the title variable.</li>
-<li>&lt;%= heading %&gt; will display the value of the heading variable.</li>
-<li>&lt;%= message %&gt; will display the value of the message variable.</li>
-</ul>
+<details class="abstract" open="open">
+<summary>Abstract</summary>
+<p>In this case, if loggedIn is truthy, the EJS template will display a welcome message that includes the username variable interpolated using the &lt;%= %&gt; syntax. If loggedIn is falsy, the message won't be displayed.</p>
+</details>
+<h2 id="else-statement">Else statement</h2>
+<div class="language-py highlight"><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="o">&lt;%</span> <span class="k">if</span> <span class="p">(</span><span class="n">user</span><span class="o">.</span><span class="n">isAdmin</span><span class="p">)</span> <span class="p">{</span> <span class="o">%&gt;</span>
+</span><span id="__span-1-2"><a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a>  <span class="o">&lt;</span><span class="n">p</span><span class="o">&gt;</span><span class="n">Welcome</span><span class="p">,</span> <span class="n">administrator</span><span class="o">.&lt;/</span><span class="n">p</span><span class="o">&gt;</span>
+</span><span id="__span-1-3"><a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a><span class="o">&lt;%</span> <span class="p">}</span> <span class="k">else</span> <span class="p">{</span> <span class="o">%&gt;</span>
+</span><span id="__span-1-4"><a id="__codelineno-1-4" name="__codelineno-1-4" href="#__codelineno-1-4"></a>  <span class="o">&lt;</span><span class="n">p</span><span class="o">&gt;</span><span class="n">Welcome</span><span class="p">,</span> <span class="n">user</span><span class="o">.&lt;/</span><span class="n">p</span><span class="o">&gt;</span>
+</span><span id="__span-1-5"><a id="__codelineno-1-5" name="__codelineno-1-5" href="#__codelineno-1-5"></a><span class="o">&lt;%</span> <span class="p">}</span> <span class="o">%&gt;</span>
+</span></code></pre></div>
+<details class="abstract" open="open">
+<summary>Abstract</summary>
+<p>In this example, if the user object has an isAdmin property with a value of true, the template will display a message welcoming the administrator. Otherwise, it will display a message welcoming the user. The else statement provides a fallback option for when the if condition is not met.</p>
+</details>
+<h2 id="else-if-statement">Else-if statement</h2>
+<p>Example:</p>
+<div class="language-py highlight"><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a><span class="o">&lt;%</span> <span class="k">if</span> <span class="p">(</span><span class="n">score</span> <span class="o">&gt;=</span> <span class="mi">90</span><span class="p">)</span> <span class="p">{</span> <span class="o">%&gt;</span>
+</span><span id="__span-2-2"><a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a>  <span class="o">&lt;</span><span class="n">p</span><span class="o">&gt;</span><span class="n">You</span> <span class="n">got</span> <span class="n">an</span> <span class="n">A</span><span class="err">!</span><span class="o">&lt;/</span><span class="n">p</span><span class="o">&gt;</span>
+</span><span id="__span-2-3"><a id="__codelineno-2-3" name="__codelineno-2-3" href="#__codelineno-2-3"></a><span class="o">&lt;%</span> <span class="p">}</span> <span class="k">else</span> <span class="k">if</span> <span class="p">(</span><span class="n">score</span> <span class="o">&gt;=</span> <span class="mi">80</span><span class="p">)</span> <span class="p">{</span> <span class="o">%&gt;</span>
+</span><span id="__span-2-4"><a id="__codelineno-2-4" name="__codelineno-2-4" href="#__codelineno-2-4"></a>  <span class="o">&lt;</span><span class="n">p</span><span class="o">&gt;</span><span class="n">You</span> <span class="n">got</span> <span class="n">a</span> <span class="n">B</span><span class="o">.&lt;/</span><span class="n">p</span><span class="o">&gt;</span>
+</span><span id="__span-2-5"><a id="__codelineno-2-5" name="__codelineno-2-5" href="#__codelineno-2-5"></a><span class="o">&lt;%</span> <span class="p">}</span> <span class="k">else</span> <span class="k">if</span> <span class="p">(</span><span class="n">score</span> <span class="o">&gt;=</span> <span class="mi">70</span><span class="p">)</span> <span class="p">{</span> <span class="o">%&gt;</span>
+</span><span id="__span-2-6"><a id="__codelineno-2-6" name="__codelineno-2-6" href="#__codelineno-2-6"></a>  <span class="o">&lt;</span><span class="n">p</span><span class="o">&gt;</span><span class="n">You</span> <span class="n">got</span> <span class="n">a</span> <span class="n">C</span><span class="o">.&lt;/</span><span class="n">p</span><span class="o">&gt;</span>
+</span><span id="__span-2-7"><a id="__codelineno-2-7" name="__codelineno-2-7" href="#__codelineno-2-7"></a><span class="o">&lt;%</span> <span class="p">}</span> <span class="k">else</span> <span class="p">{</span> <span class="o">%&gt;</span>
+</span><span id="__span-2-8"><a id="__codelineno-2-8" name="__codelineno-2-8" href="#__codelineno-2-8"></a>  <span class="o">&lt;</span><span class="n">p</span><span class="o">&gt;</span><span class="n">You</span> <span class="n">need</span> <span class="n">to</span> <span class="n">study</span> <span class="n">harder</span><span class="o">.&lt;/</span><span class="n">p</span><span class="o">&gt;</span>
+</span><span id="__span-2-9"><a id="__codelineno-2-9" name="__codelineno-2-9" href="#__codelineno-2-9"></a><span class="o">&lt;%</span> <span class="p">}</span> <span class="o">%&gt;</span>
+</span></code></pre></div>
+<details class="abstract" open="open">
+<summary>Abstract</summary>
+<p>the EJS template will display a different message depending on the value of the score variable. If score is greater than or equal to 90, the template will display a message indicating an A grade. If score is greater than or equal to 80, it will display a message indicating a B grade, and so on. If none of the conditions are met, it will display a message indicating that the user needs to study harder.</p>
+</details>
+<details class="quote" open="open">
+<summary>Quote</summary>
+<p>Overall, conditional statements in EJS allow you to create dynamic content that adapts to the state of your application, providing a more personalized experience for your users.</p>
+</details>
 <details class="success" open="open">
 <summary>Success</summary>
-<p>You have created a basic EJS template. You can now use this template to generate HTML markup with plain JavaScript.</p>
+<p>Great work! You have learned how to use conditional statements in EJS templates to display different content based on conditions.</p>
 </details>
-<h2 id="create-data-to-pass-to-the-template">Create Data to Pass to the Template</h2>
-<blockquote>
-<p>One of the main benefits of using a templating language like EJS is the ability to pass data to the template.</p>
-</blockquote>
-<p>In order to display dynamic content on the web page, we need to pass data to the EJS template. To do this, create a new file in your project folder called data.js. This file will contain the data that we want to display on our web page.</p>
-<p>Create an object with the data that you want to dynamically display in your HTML file. For example, let's create an object with a title, heading, and message.</p>
-<div class="language-js highlight"><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="kd">const</span><span class="w"> </span><span class="nx">data</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">{</span>
-</span><span id="__span-1-2"><a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a><span class="w">  </span><span class="nx">title</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;EJS Guide&quot;</span><span class="p">,</span>
-</span><span id="__span-1-3"><a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a><span class="w">  </span><span class="nx">heading</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;Welcome to EJS Guide Website!&quot;</span><span class="p">,</span>
-</span><span id="__span-1-4"><a id="__codelineno-1-4" name="__codelineno-1-4" href="#__codelineno-1-4"></a><span class="w">  </span><span class="nx">message</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;This is a sample EJS template.&quot;</span><span class="p">,</span>
-</span><span id="__span-1-5"><a id="__codelineno-1-5" name="__codelineno-1-5" href="#__codelineno-1-5"></a><span class="p">};</span>
-</span><span id="__span-1-6"><a id="__codelineno-1-6" name="__codelineno-1-6" href="#__codelineno-1-6"></a>
-</span><span id="__span-1-7"><a id="__codelineno-1-7" name="__codelineno-1-7" href="#__codelineno-1-7"></a><span class="nx">module</span><span class="p">.</span><span class="nx">exports</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">data</span><span class="p">;</span>
-</span></code></pre></div>
-<h2 id="set-up-your-express-app">Set up your Express app</h2>
-<p>Create a new file in your project folder called app.js. This file will contain the code to set up your Express.js app.</p>
-<div class="language-js highlight"><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a><span class="kd">const</span><span class="w"> </span><span class="nx">express</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">require</span><span class="p">(</span><span class="s2">&quot;express&quot;</span><span class="p">);</span>
-</span><span id="__span-2-2"><a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a><span class="kd">const</span><span class="w"> </span><span class="nx">app</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">express</span><span class="p">();</span>
-</span><span id="__span-2-3"><a id="__codelineno-2-3" name="__codelineno-2-3" href="#__codelineno-2-3"></a><span class="kd">const</span><span class="w"> </span><span class="nx">data</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">require</span><span class="p">(</span><span class="s2">&quot;./data&quot;</span><span class="p">);</span>
-</span><span id="__span-2-4"><a id="__codelineno-2-4" name="__codelineno-2-4" href="#__codelineno-2-4"></a>
-</span><span id="__span-2-5"><a id="__codelineno-2-5" name="__codelineno-2-5" href="#__codelineno-2-5"></a><span class="nx">app</span><span class="p">.</span><span class="nx">set</span><span class="p">(</span><span class="s2">&quot;view engine&quot;</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;ejs&quot;</span><span class="p">);</span>
-</span><span id="__span-2-6"><a id="__codelineno-2-6" name="__codelineno-2-6" href="#__codelineno-2-6"></a>
-</span><span id="__span-2-7"><a id="__codelineno-2-7" name="__codelineno-2-7" href="#__codelineno-2-7"></a><span class="nx">app</span><span class="p">.</span><span class="nx">get</span><span class="p">(</span><span class="s2">&quot;/&quot;</span><span class="p">,</span><span class="w"> </span><span class="p">(</span><span class="nx">req</span><span class="p">,</span><span class="w"> </span><span class="nx">res</span><span class="p">)</span><span class="w"> </span><span class="p">=&gt;</span><span class="w"> </span><span class="p">{</span>
-</span><span id="__span-2-8"><a id="__codelineno-2-8" name="__codelineno-2-8" href="#__codelineno-2-8"></a><span class="w">  </span><span class="nx">res</span><span class="p">.</span><span class="nx">render</span><span class="p">(</span><span class="s2">&quot;index&quot;</span><span class="p">,</span><span class="w"> </span><span class="nx">data</span><span class="p">);</span>
-</span><span id="__span-2-9"><a id="__codelineno-2-9" name="__codelineno-2-9" href="#__codelineno-2-9"></a><span class="p">});</span>
-</span><span id="__span-2-10"><a id="__codelineno-2-10" name="__codelineno-2-10" href="#__codelineno-2-10"></a>
-</span><span id="__span-2-11"><a id="__codelineno-2-11" name="__codelineno-2-11" href="#__codelineno-2-11"></a><span class="nx">app</span><span class="p">.</span><span class="nx">listen</span><span class="p">(</span><span class="mf">3000</span><span class="p">,</span><span class="w"> </span><span class="p">()</span><span class="w"> </span><span class="p">=&gt;</span><span class="w"> </span><span class="p">{</span>
-</span><span id="__span-2-12"><a id="__codelineno-2-12" name="__codelineno-2-12" href="#__codelineno-2-12"></a><span class="w">  </span><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s2">&quot;Server started on port 3000&quot;</span><span class="p">);</span>
-</span><span id="__span-2-13"><a id="__codelineno-2-13" name="__codelineno-2-13" href="#__codelineno-2-13"></a><span class="p">});</span>
-</span></code></pre></div>
-<p>In this code, we:</p>
-<ul>
-<li>Require the express module and create a new instance of an express app.</li>
-<li>Require the data from our data.js file.</li>
-<li>Set the view engine to EJS.</li>
-<li>Create a new route that renders our index.ejs file and passes in the data from data.js.</li>
-<li>Start the server on port 3000 and log a message to the console.</li>
-</ul>
-<h2 id="start-the-server">Start the server</h2>
-<p>In the terminal, run the following command to start the server:</p>
-<div class="language-text highlight"><pre><span></span><code><span id="__span-3-1"><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a>node app.js
-</span></code></pre></div>
-<details class="success" open="open">
-<summary>Success</summary>
-<p>Now, visit "http://localhost:3000"</p>
-</details>
-<h2 id="outcome">Outcome</h2>
-<p><img alt="npm i" src="../images/image1.png" /></p>
 
 
 
@@ -622,7 +480,7 @@ CLI stands for "Command Line Interface".</p>
       <nav class="md-footer__inner md-grid" aria-label="Footer" >
         
           
-          <a href="../task1/" class="md-footer__link md-footer__link--prev" aria-label="Previous: Installing EJS" rel="prev">
+          <a href="../task2/" class="md-footer__link md-footer__link--prev" aria-label="Previous: Creating EJS templates" rel="prev">
             <div class="md-footer__button md-icon">
               <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
             </div>
@@ -631,20 +489,20 @@ CLI stands for "Command Line Interface".</p>
                 <span class="md-footer__direction">
                   Previous
                 </span>
-                Installing EJS
+                Creating EJS templates
               </div>
             </div>
           </a>
         
         
           
-          <a href="../task3/" class="md-footer__link md-footer__link--next" aria-label="Next: Conditional statements in EJS templates" rel="next">
+          <a href="../Glossary/" class="md-footer__link md-footer__link--next" aria-label="Next: Glossary" rel="next">
             <div class="md-footer__title">
               <div class="md-ellipsis">
                 <span class="md-footer__direction">
                   Next
                 </span>
-                Conditional statements in EJS templates
+                Glossary
               </div>
             </div>
             <div class="md-footer__button md-icon">

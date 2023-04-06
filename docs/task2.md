@@ -111,4 +111,4 @@ node app.js
     Now, visit "http://localhost:3000"
 
 ## Outcome
-![npm i](/images/Outcome Screenshot.png "Successful Outcome")
+![npm i](images/image1.png)

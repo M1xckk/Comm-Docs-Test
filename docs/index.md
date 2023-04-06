@@ -37,12 +37,12 @@ This documentation assumes the following:
 
 ## Procedures Overview
 
-- **[Installing EJS Guide](/EJS-Beginner-Guide/task1)**
+- **[Installing EJS Guide](task1)**
   > This section guides you through the process of installing EJS on your local machine. The steps include checking for prerequisites such as having Node.js installed and creating a package.json file using the npm init command. Then, you will be instructed to run the command 'npm install ejs --save' in the project directory using the terminal.
 
-- **[Creating EJS templates](/EJS-Beginner-Guide/task2)**
+- **[Creating EJS templates](task2)**
   > This task explains how to create EJS templates and embed dynamic content within them. The process involves creating a new file with the .ejs extension in the views directory, adding basic HTML markup, using <%= %> tags to embed EJS code in the HTML markup, and passing dynamic data from the server to the EJS template using the res.render() method.
-- **[Conditional statements in EJS templates](/EJS-Beginner-Guide/task3)**
+- **[Conditional statements in EJS templates](task3)**
   > This task explains how to use conditional statements in EJS templates to display different content based on conditions. It covers the syntax for creating if statements, else statements, and else-if statements using various tags.
 
 

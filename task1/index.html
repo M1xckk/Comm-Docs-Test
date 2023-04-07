@@ -280,13 +280,6 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#how-to-start-with-ejs" class="md-nav__link">
-    How to start with EJS
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
   <a href="#ejs-tags" class="md-nav__link">
     EJS Tags
   </a>
@@ -409,13 +402,6 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#how-to-start-with-ejs" class="md-nav__link">
-    How to start with EJS
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
   <a href="#ejs-tags" class="md-nav__link">
     EJS Tags
   </a>
@@ -456,46 +442,79 @@ At this point, you should have Node.js and VS Code installed on your local compu
 <ol>
 <li>Create a new project directory.<ol>
 <li>Open your terminal or command prompt.</li>
+<li>Move to your desktop!
+   <div class="language-py highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="n">cd</span> <span class="n">Desktop</span>
+</span></code></pre></div></li>
 <li>Create a new directory for your project by entering the following command:
-   <div class="language-text highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>mkdir my-ejs-project
+   <div class="language-py highlight"><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="n">mkdir</span> <span class="n">my</span><span class="o">-</span><span class="n">ejs</span><span class="o">-</span><span class="n">project</span>
 </span></code></pre></div></li>
 </ol>
 </li>
-<li>Navigate to the project directory.<ol>
-<li>Navigate to the project directory by entering the following command in the terminal. 
-   <div class="language-text highlight"><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>cd my-ejs-project
+<li>In your same terminal, navigate to the project directory.<ol>
+<li>Navigate to the project directory by entering the following command in the terminal.
+   <div class="language-py highlight"><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a><span class="n">cd</span> <span class="n">my</span><span class="o">-</span><span class="n">ejs</span><span class="o">-</span><span class="n">project</span>
 </span></code></pre></div></li>
 </ol>
 </li>
-<li>Initialize the project.<ol>
-<li>Initialize the porject with npm by entering the following command in the terminal/</li>
-<li>This will create a "package.json" and "package-lock.json" file in the project directory. 
-   <div class="language-text highlight"><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a>npm init
-</span></code></pre></div>
-<img alt="npm i" src="../images/image2.png" /></li>
+<li>
+<p>Initialize a new Node.js project.</p>
+<ol>
+<li>In the terminal, run the following command to open your project directory in "Visual Studio Code"
+   <div class="language-py highlight"><pre><span></span><code><span id="__span-3-1"><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a><span class="n">code</span> <span class="o">.</span>
+</span></code></pre></div></li>
+<li>Once the "Visual Studio Code" is opened, open the console by pressing <strong>ctrl+J</strong> (Windows) or <strong>BRIAN HERE</strong> (Mac) to open the console.</li>
+<li>Use the following command to install EJS using npm (Node Package Manager) in the console. This will create a "package.json" and "package-lock.json" file in the project directory.
+   <div class="language-py highlight"><pre><span></span><code><span id="__span-4-1"><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a><span class="n">npm</span> <span class="n">init</span>
+</span></code></pre></div></li>
+<li>You can accept the default values for most of the prompts, or customize them as needed.</li>
 </ol>
+<p><img alt="npm i" src="../images/image2.png" /> </p>
 </li>
-<li>Install  Express and EJS using npm. <ol>
-<li>Enter the following command in the terminal.</li>
-<li>This command will install Express and EJS and add it to the "dependencies" section of the "package.json" file. 
-   <div class="language-text highlight"><pre><span></span><code><span id="__span-3-1"><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a>npm install express ejs 
+<li>
+<p>Install Express module. </p>
+<ol>
+<li>Enter the following command in the terminal. </li>
+<li>This will install Express as a dependency for your project.
+  <div class="language-py highlight"><pre><span></span><code><span id="__span-5-1"><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a><span class="n">npm</span> <span class="n">install</span> <span class="n">express</span>
 </span></code></pre></div></li>
 </ol>
 </li>
+<li>Install EJS module. <ol>
+<li>Enter the following command in the terminal. </li>
+<li>This will install EJS as a dependency for your project.
+  <div class="language-py highlight"><pre><span></span><code><span id="__span-6-1"><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a><span class="n">npm</span> <span class="n">install</span> <span class="n">ejs</span> 
+</span></code></pre></div></li>
 </ol>
-<h2 id="how-to-start-with-ejs">How to start with EJS</h2>
-<p>To start with the ejs first we need to set our app to use it. We can simply add this using app.</p>
-<div class="language-py highlight"><pre><span></span><code><span id="__span-4-1"><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a><span class="nb">set</span><span class="p">(</span><span class="s1">&#39;view engine&#39;</span><span class="p">,</span> <span class="s1">&#39;ejs&#39;</span><span class="p">)</span>
-</span></code></pre></div>
-<p>This code will tell yur app to use EJS as the view engine. </p>
-<details class="info" open="open">
-<summary>Info</summary>
-<p>This app.set('view engine', 'ejs') will look into views folder on the same path. So we need to create views folder for writing those frontend templates.</p>
+</li>
+<li>Create a new file in you project directory named "app.js". <ol>
+<li>This will serve as the main entry point for your application. </li>
+</ol>
+</li>
+<li>Open "app.js" in your Visual Code Studio. </li>
+<li>Require the "express" module by adding the following line to the top of your "app.js".
+      <div class="language-py highlight"><pre><span></span><code><span id="__span-7-1"><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a><span class="n">const</span> <span class="n">express</span> <span class="o">=</span> <span class="n">require</span><span class="p">(</span><span class="err">`</span><span class="n">express</span><span class="err">`</span><span class="p">);</span>
+</span></code></pre></div></li>
+<li>Create an instance of the Express application by adding the following line in your "app.js".
+      <div class="language-py highlight"><pre><span></span><code><span id="__span-8-1"><a id="__codelineno-8-1" name="__codelineno-8-1" href="#__codelineno-8-1"></a><span class="n">const</span> <span class="n">app</span> <span class="o">=</span> <span class="n">exprees</span><span class="p">();</span>
+</span></code></pre></div></li>
+<li>Set the view engine to EJS by adding the following line in your "app.js".
+      <div class="language-py highlight"><pre><span></span><code><span id="__span-9-1"><a id="__codelineno-9-1" name="__codelineno-9-1" href="#__codelineno-9-1"></a><span class="n">app</span><span class="o">.</span><span class="n">set</span><span class="p">(</span><span class="err">`</span><span class="n">view</span> <span class="n">engine</span><span class="err">`</span><span class="p">,</span>  <span class="err">`</span><span class="n">ejs</span><span class="err">`</span><span class="p">);</span>
+</span></code></pre></div></li>
+<li>Create a route for your application by adding the following lines: <ol>
+<li>This route will render a file named "index.ejs" located in the "views" directory. Now let's create this file!
+  <div class="language-py highlight"><pre><span></span><code><span id="__span-10-1"><a id="__codelineno-10-1" name="__codelineno-10-1" href="#__codelineno-10-1"></a><span class="n">app</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">&#39;/&#39;</span><span class="p">,</span> <span class="p">(</span><span class="n">req</span><span class="p">,</span> <span class="n">res</span><span class="p">)</span> <span class="o">=&gt;</span> <span class="p">{</span>
+</span><span id="__span-10-2"><a id="__codelineno-10-2" name="__codelineno-10-2" href="#__codelineno-10-2"></a>      <span class="n">res</span><span class="o">.</span><span class="n">render</span><span class="p">(</span><span class="s1">&#39;index&#39;</span><span class="p">);</span>
+</span><span id="__span-10-3"><a id="__codelineno-10-3" name="__codelineno-10-3" href="#__codelineno-10-3"></a><span class="p">});</span>
+</span></code></pre></div></li>
+</ol>
+</li>
+<li>Create a "views" directory in your project directory. </li>
+<li>Creae a new file in the "views" directory named "index.ejs".</li>
+</ol>
+<details class="suceess" open="open">
+<summary>Suceess</summary>
 </details>
-<details class="tips" open="open">
-<summary>Tips</summary>
-<p>Use EJS tags to embed JavaScript code into your HTML code</p>
-</details>
+<p>Now you are ready to explore the dynamics of EJS!</p>
 <h2 id="ejs-tags">EJS Tags</h2>
 <table>
 <thead>

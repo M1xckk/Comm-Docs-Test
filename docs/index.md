@@ -33,10 +33,9 @@ This documentation assumes the following:
 
 - **[Node.js](https://nodejs.org/en)**: EJS runs on Node.js _(JavaScript runtime environment)_.
 
-- **[Visual Studio Code](https://code.visualstudio.com/download)** : This is required to create and edit your EJS files. This documentation is using "Visual Studio Code". However, you can choose other code editor such as Sublime Text, and Atom.
+- **[Visual Studio Code](https://code.visualstudio.com/download)** : This is required to create and edit your EJS files. This documentation is using "Visual Studio Code". However, you can choose other code editor such as Sublime Text.
 
-- **[EJS module](https://www.npmjs.com/package/ejs)**
-  > This documentation will guide you through the installation process of EJS.
+- **[EJS module](https://www.npmjs.com/package/ejs)** This documentation will guide you through the installation process of EJS 👍
 
 ## Procedures Overview
 

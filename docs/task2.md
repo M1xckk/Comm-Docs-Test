@@ -26,89 +26,132 @@ CLI stands for "Command Line Interface".
 
 ## Create a basic EJS template
 
-1. Create a a new folder called "views".
-2. Inside of your "views" folder, create a new file in your project directory called index.ejs.
+Inside of your "views" folder, you have your "index.ejs" file. This file will contain your EJS template.
 
-This file will contain your EJS template. Here's an example of a simple EJS template:
+Here's an example of a simple EJS template:
 
 ```
-  <!DOCTYPE html>
+<!DOCTYPE html>
 <html>
   <head>
-    <title><%= title %></title>
+    <title><%= data.title %></title>
   </head>
   <body>
-    <h1><%= heading %></h1>
-    <p><%= message %></p>
+    <h1><%= data.heading %></h1>
+    <p><%= data.message %></p>
   </body>
 </html>
 ```
 
 In this template, there will be three EJS expressions:
 
-- <%= title %> will display the value of the title variable.
-- <%= heading %> will display the value of the heading variable.
-- <%= message %> will display the value of the message variable.
+- <%= data.title %> will display the value of the title variable.
+- <%= data.heading %> will display the value of the heading variable.
+- <%= data.message %> will display the value of the message variable.
 
 ???+Success
     You have created a basic EJS template. You can now use this template to generate HTML markup with plain JavaScript.
 
 ## Create Data to Pass to the Template
 
-> One of the main benefits of using a templating language like EJS is the ability to pass data to the template.
+> One of the main benefits of using a templating language like EJS is the ability to pass data to the template. In order to display dynamic content on the web page, we need to pass data to the EJS template.
 
-In order to display dynamic content on the web page, we need to pass data to the EJS template. To do this, create a new file in your project folder called data.js. This file will contain the data that we want to display on our web page.
+1. To do this, create an object with the data that you want to dynamically display in your HTML file in your "app.js" file. For example, let's create an object with a title, heading, and message.
 
-Create an object with the data that you want to dynamically display in your HTML file. For example, let's create an object with a title, heading, and message.
+2. Simply, copy and paste the following code in your "app.js" file.
 
-```js
+```py
 const data = {
   title: "EJS Guide",
   heading: "Welcome to EJS Guide Website!",
   message: "This is a sample EJS template.",
 };
-
-module.exports = data;
 ```
 
-## Set up your Express app
+3. Now, pass in your data to ejs file by modifying your "app.get" function in you "app.js" file.
+
+```py
+app.get("/", (req, res) => {
+  res.render("index", {data});
+});
+```
+
+## One step before you run your first dynamic ejs file!
+
+### Successful Outcome
+
+![npm i](images/image6.png)
 
 Create a new file in your project folder called app.js. This file will contain the code to set up your Express.js app.
 
 ```js
 const express = require("express");
 const app = express();
-const data = require("./data");
+
+const data = {
+  title: "EJS Guide",
+  heading: "Welcome to EJS Guide Website!",
+  message: "This is a sample EJS template.",
+};
 
 app.set("view engine", "ejs");
 
 app.get("/", (req, res) => {
-  res.render("index", data);
+  res.render("index", { data });
 });
 
-app.listen(3000, () => {
-  console.log("Server started on port 3000");
+app.listen(8080, () => {
+  console.log("Server is listening on port 8080");
 });
 ```
 
 In this code, we:
 
-- Require the express module and create a new instance of an express app.
-- Require the data from our data.js file.
-- Set the view engine to EJS.
-- Create a new route that renders our index.ejs file and passes in the data from data.js.
-- Start the server on port 3000 and log a message to the console.
+- `const express = require("express");`
+
+    - This line imports the express module, which is a popular framework for building web applications in Node.js.
+
+- `const app = express();`
+
+    - This creates an instance of the express application.
+
+- `const data = {
+  title: "EJS Guide",
+  heading: "Welcome to EJS Guide Website!",
+  message: "This is a sample EJS template.",
+};` 
+
+    - This creates an object called data that contains some information that will be used to render a web page.
+
+- `app.set("view engine", "ejs");`
+
+    - This line tells the express application to use the EJS template engine for rendering views. EJS stands for Embedded JavaScript, which is a popular template language for building web pages.
+
+- `app.get("/", (req, res) => {
+  res.render("index", { data });
+});`
+
+    - This sets up a route handler for the root URL of the application ("/"). When a client requests this URL, the app.get() function will be called. This function takes two arguments: a callback function and an object. The callback function takes two arguments: req (short for "request") and res (short for "response"). The req object represents the HTTP request that the client sent, and the res object represents the HTTP response that the server will send back to the client.
+
+    - Inside the callback function, the res.render() function is called, which tells express to render the "index" view using the data object we defined earlier. The "index" view is an EJS template that will be used to generate the HTML that will be sent back to the client.
+
+- `app.listen(8080, () => {
+  console.log("Server is listening on port 8080");
+});`
+
+    - This starts the express application and listens for incoming HTTP requests on port 8080. When the server starts up, it will log a message to the console to let you know that it's running.
 
 ## Start the server
 
-In the terminal, run the following command to start the server:
+In the terminal in your Visual Studio Code, run the following command to start the server:
 
 ```
 node app.js
 ```
 
 ???+Success
-    Now, visit "http://localhost:3000"
+    Now, visit "http://localhost:8080"
 
 ## Outcome
+
 ![npm i](images/image1.png)

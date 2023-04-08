@@ -12,9 +12,30 @@ The goal of this documentation is to provide a comprehensive guide on how to use
 
 #### Topics covered:
 
-- Installing EJS
-- Creating EJS templates
-- Conditional statements in EJS templates
+- index.md: Introduction page
+
+    - The file covers the intended user of EJS and intended use of the following software. Also it identifies prerequisite knowledge for using EJS. It also lists the required software, including Node.js and a code editor such as Visual Studio Code.
+
+- task1.md: Installing EJS
+
+    - This file guides on how to install and set up EJS, a templating engine for Node.js. It provides step-by-step instructions on how to install the necessary software and modules, and create a simple web application that uses EJS templates to render dynamic content. The guide assumes that the reader has some basic knowledge of web development and is comfortable using a terminal or command prompt. It also introduces the basic EJS tags that are used to embed dynamic content in the templates.
+
+- task2.md: Creating EJS templates
+
+    - This file explains the benefits of using EJS templates and how to pass data to the template. It also provides instructions on how to set up an Express.js application, import the EJS template engine, and render a view using the data passed in.
+
+- task3.md: Conditional statements in EJS templates
+
+    - This file is about using conditional statements in EJS templates to display different content based on certain conditions. It explains about how to use if, else, and else-if statements in EJS templates, and how to interpolate variables into the HTML output. By using these conditional statements, developers can create more dynamic and personalized content for their web applications. The article also emphasizes the importance of understanding conditional statements to create more engaging web applications.
+
+
+- Glossary
+
+    - This file explains the glossaries used in our user documentation. 
+
+- Troubleshoot-guide.md
+
+    - The file is a guide to troubleshoot common issues that may arise when working with EJS (Embedded JavaScript) templates. It provides solutions to issues such as incorrect rendering of templates, EJS tags not being evaluated properly, data not being displayed correctly, syntax errors, incorrect installation of EJS, incorrect data types, incorrect data rendering, issues with rendering HTML tags, incorrect file paths or extensions, slow rendering or performance issues, and problems with displaying images or other external resources. By addressing these issues, the guide helps users ensure that their EJS templates work as expected and that their development process is smooth and efficient.
 
 ### Who Is This For?
 
@@ -40,4 +61,4 @@ EJS is a powerful templating engine that allows you to generate dynamic HTML mar
 - Allows you to create reusable templates that can be used across multiple pages, saving you time and effort
   Overall, EJS is a powerful tool that can help you build dynamic web pages quickly and easily. We hope this documentation will help you learn how to use EJS effectively and take your web development skills to the next level!
 
-// Brian did the task1, task3 and troubleshooting , Selina did index, task2 and glossary. 
+// Brian did the task1, task3 and troubleshooting , Selina did index, task 1, task2 and glossary. 

@@ -295,9 +295,22 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#set-up-your-express-app" class="md-nav__link">
-    Set up your Express app
+  <a href="#one-step-before-you-run-your-first-dynamic-ejs-file" class="md-nav__link">
+    One step before you run your first dynamic ejs file!
   </a>
+  
+    <nav class="md-nav" aria-label="One step before you run your first dynamic ejs file!">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#successful-outcome" class="md-nav__link">
+    Successful Outcome
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
       
@@ -416,9 +429,22 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#set-up-your-express-app" class="md-nav__link">
-    Set up your Express app
+  <a href="#one-step-before-you-run-your-first-dynamic-ejs-file" class="md-nav__link">
+    One step before you run your first dynamic ejs file!
   </a>
+  
+    <nav class="md-nav" aria-label="One step before you run your first dynamic ejs file!">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#successful-outcome" class="md-nav__link">
+    Successful Outcome
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
       
@@ -522,27 +548,24 @@ CLI stands for "Command Line Interface".</p>
 </tbody>
 </table>
 <h2 id="create-a-basic-ejs-template">Create a basic EJS template</h2>
-<ol>
-<li>Create a a new folder called "views".</li>
-<li>Inside of your "views" folder, create a new file in your project directory called index.ejs.</li>
-</ol>
-<p>This file will contain your EJS template. Here's an example of a simple EJS template:</p>
-<div class="language-text highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>  &lt;!DOCTYPE html&gt;
+<p>Inside of your "views" folder, you have your "index.ejs" file. This file will contain your EJS template.</p>
+<p>Here's an example of a simple EJS template:</p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>&lt;!DOCTYPE html&gt;
 </span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>&lt;html&gt;
 </span><span id="__span-0-3"><a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a>  &lt;head&gt;
-</span><span id="__span-0-4"><a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a>    &lt;title&gt;&lt;%= title %&gt;&lt;/title&gt;
+</span><span id="__span-0-4"><a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a>    &lt;title&gt;&lt;%= data.title %&gt;&lt;/title&gt;
 </span><span id="__span-0-5"><a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a>  &lt;/head&gt;
 </span><span id="__span-0-6"><a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a>  &lt;body&gt;
-</span><span id="__span-0-7"><a id="__codelineno-0-7" name="__codelineno-0-7" href="#__codelineno-0-7"></a>    &lt;h1&gt;&lt;%= heading %&gt;&lt;/h1&gt;
-</span><span id="__span-0-8"><a id="__codelineno-0-8" name="__codelineno-0-8" href="#__codelineno-0-8"></a>    &lt;p&gt;&lt;%= message %&gt;&lt;/p&gt;
+</span><span id="__span-0-7"><a id="__codelineno-0-7" name="__codelineno-0-7" href="#__codelineno-0-7"></a>    &lt;h1&gt;&lt;%= data.heading %&gt;&lt;/h1&gt;
+</span><span id="__span-0-8"><a id="__codelineno-0-8" name="__codelineno-0-8" href="#__codelineno-0-8"></a>    &lt;p&gt;&lt;%= data.message %&gt;&lt;/p&gt;
 </span><span id="__span-0-9"><a id="__codelineno-0-9" name="__codelineno-0-9" href="#__codelineno-0-9"></a>  &lt;/body&gt;
 </span><span id="__span-0-10"><a id="__codelineno-0-10" name="__codelineno-0-10" href="#__codelineno-0-10"></a>&lt;/html&gt;
 </span></code></pre></div>
 <p>In this template, there will be three EJS expressions:</p>
 <ul>
-<li>&lt;%= title %&gt; will display the value of the title variable.</li>
-<li>&lt;%= heading %&gt; will display the value of the heading variable.</li>
-<li>&lt;%= message %&gt; will display the value of the message variable.</li>
+<li>&lt;%= data.title %&gt; will display the value of the title variable.</li>
+<li>&lt;%= data.heading %&gt; will display the value of the heading variable.</li>
+<li>&lt;%= data.message %&gt; will display the value of the message variable.</li>
 </ul>
 <details class="success" open="open">
 <summary>Success</summary>
@@ -550,49 +573,111 @@ CLI stands for "Command Line Interface".</p>
 </details>
 <h2 id="create-data-to-pass-to-the-template">Create Data to Pass to the Template</h2>
 <blockquote>
-<p>One of the main benefits of using a templating language like EJS is the ability to pass data to the template.</p>
+<p>One of the main benefits of using a templating language like EJS is the ability to pass data to the template. In order to display dynamic content on the web page, we need to pass data to the EJS template.</p>
 </blockquote>
-<p>In order to display dynamic content on the web page, we need to pass data to the EJS template. To do this, create a new file in your project folder called data.js. This file will contain the data that we want to display on our web page.</p>
-<p>Create an object with the data that you want to dynamically display in your HTML file. For example, let's create an object with a title, heading, and message.</p>
-<div class="language-js highlight"><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="kd">const</span><span class="w"> </span><span class="nx">data</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">{</span>
-</span><span id="__span-1-2"><a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a><span class="w">  </span><span class="nx">title</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;EJS Guide&quot;</span><span class="p">,</span>
-</span><span id="__span-1-3"><a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a><span class="w">  </span><span class="nx">heading</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;Welcome to EJS Guide Website!&quot;</span><span class="p">,</span>
-</span><span id="__span-1-4"><a id="__codelineno-1-4" name="__codelineno-1-4" href="#__codelineno-1-4"></a><span class="w">  </span><span class="nx">message</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;This is a sample EJS template.&quot;</span><span class="p">,</span>
+<ol>
+<li>
+<p>To do this, create an object with the data that you want to dynamically display in your HTML file in your "app.js" file. For example, let's create an object with a title, heading, and message.</p>
+</li>
+<li>
+<p>Simply, copy and paste the following code in your "app.js" file.</p>
+</li>
+</ol>
+<div class="language-py highlight"><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="n">const</span> <span class="n">data</span> <span class="o">=</span> <span class="p">{</span>
+</span><span id="__span-1-2"><a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a>  <span class="n">title</span><span class="p">:</span> <span class="s2">&quot;EJS Guide&quot;</span><span class="p">,</span>
+</span><span id="__span-1-3"><a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a>  <span class="n">heading</span><span class="p">:</span> <span class="s2">&quot;Welcome to EJS Guide Website!&quot;</span><span class="p">,</span>
+</span><span id="__span-1-4"><a id="__codelineno-1-4" name="__codelineno-1-4" href="#__codelineno-1-4"></a>  <span class="n">message</span><span class="p">:</span> <span class="s2">&quot;This is a sample EJS template.&quot;</span><span class="p">,</span>
 </span><span id="__span-1-5"><a id="__codelineno-1-5" name="__codelineno-1-5" href="#__codelineno-1-5"></a><span class="p">};</span>
-</span><span id="__span-1-6"><a id="__codelineno-1-6" name="__codelineno-1-6" href="#__codelineno-1-6"></a>
-</span><span id="__span-1-7"><a id="__codelineno-1-7" name="__codelineno-1-7" href="#__codelineno-1-7"></a><span class="nx">module</span><span class="p">.</span><span class="nx">exports</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">data</span><span class="p">;</span>
 </span></code></pre></div>
-<h2 id="set-up-your-express-app">Set up your Express app</h2>
+<ol>
+<li>Now, pass in your data to ejs file by modifying your "app.get" function in you "app.js" file.</li>
+</ol>
+<div class="language-py highlight"><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a><span class="n">app</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">&quot;/&quot;</span><span class="p">,</span> <span class="p">(</span><span class="n">req</span><span class="p">,</span> <span class="n">res</span><span class="p">)</span> <span class="o">=&gt;</span> <span class="p">{</span>
+</span><span id="__span-2-2"><a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a>  <span class="n">res</span><span class="o">.</span><span class="n">render</span><span class="p">(</span><span class="s2">&quot;index&quot;</span><span class="p">,</span> <span class="p">{</span><span class="n">data</span><span class="p">});</span>
+</span><span id="__span-2-3"><a id="__codelineno-2-3" name="__codelineno-2-3" href="#__codelineno-2-3"></a><span class="p">});</span>
+</span></code></pre></div>
+<h2 id="one-step-before-you-run-your-first-dynamic-ejs-file">One step before you run your first dynamic ejs file!</h2>
+<h3 id="successful-outcome">Successful Outcome</h3>
+<p><img alt="npm i" src="../images/image6.png" /></p>
 <p>Create a new file in your project folder called app.js. This file will contain the code to set up your Express.js app.</p>
-<div class="language-js highlight"><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a><span class="kd">const</span><span class="w"> </span><span class="nx">express</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">require</span><span class="p">(</span><span class="s2">&quot;express&quot;</span><span class="p">);</span>
-</span><span id="__span-2-2"><a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a><span class="kd">const</span><span class="w"> </span><span class="nx">app</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">express</span><span class="p">();</span>
-</span><span id="__span-2-3"><a id="__codelineno-2-3" name="__codelineno-2-3" href="#__codelineno-2-3"></a><span class="kd">const</span><span class="w"> </span><span class="nx">data</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">require</span><span class="p">(</span><span class="s2">&quot;./data&quot;</span><span class="p">);</span>
-</span><span id="__span-2-4"><a id="__codelineno-2-4" name="__codelineno-2-4" href="#__codelineno-2-4"></a>
-</span><span id="__span-2-5"><a id="__codelineno-2-5" name="__codelineno-2-5" href="#__codelineno-2-5"></a><span class="nx">app</span><span class="p">.</span><span class="nx">set</span><span class="p">(</span><span class="s2">&quot;view engine&quot;</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;ejs&quot;</span><span class="p">);</span>
-</span><span id="__span-2-6"><a id="__codelineno-2-6" name="__codelineno-2-6" href="#__codelineno-2-6"></a>
-</span><span id="__span-2-7"><a id="__codelineno-2-7" name="__codelineno-2-7" href="#__codelineno-2-7"></a><span class="nx">app</span><span class="p">.</span><span class="nx">get</span><span class="p">(</span><span class="s2">&quot;/&quot;</span><span class="p">,</span><span class="w"> </span><span class="p">(</span><span class="nx">req</span><span class="p">,</span><span class="w"> </span><span class="nx">res</span><span class="p">)</span><span class="w"> </span><span class="p">=&gt;</span><span class="w"> </span><span class="p">{</span>
-</span><span id="__span-2-8"><a id="__codelineno-2-8" name="__codelineno-2-8" href="#__codelineno-2-8"></a><span class="w">  </span><span class="nx">res</span><span class="p">.</span><span class="nx">render</span><span class="p">(</span><span class="s2">&quot;index&quot;</span><span class="p">,</span><span class="w"> </span><span class="nx">data</span><span class="p">);</span>
-</span><span id="__span-2-9"><a id="__codelineno-2-9" name="__codelineno-2-9" href="#__codelineno-2-9"></a><span class="p">});</span>
-</span><span id="__span-2-10"><a id="__codelineno-2-10" name="__codelineno-2-10" href="#__codelineno-2-10"></a>
-</span><span id="__span-2-11"><a id="__codelineno-2-11" name="__codelineno-2-11" href="#__codelineno-2-11"></a><span class="nx">app</span><span class="p">.</span><span class="nx">listen</span><span class="p">(</span><span class="mf">3000</span><span class="p">,</span><span class="w"> </span><span class="p">()</span><span class="w"> </span><span class="p">=&gt;</span><span class="w"> </span><span class="p">{</span>
-</span><span id="__span-2-12"><a id="__codelineno-2-12" name="__codelineno-2-12" href="#__codelineno-2-12"></a><span class="w">  </span><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s2">&quot;Server started on port 3000&quot;</span><span class="p">);</span>
-</span><span id="__span-2-13"><a id="__codelineno-2-13" name="__codelineno-2-13" href="#__codelineno-2-13"></a><span class="p">});</span>
+<div class="language-js highlight"><pre><span></span><code><span id="__span-3-1"><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a><span class="kd">const</span><span class="w"> </span><span class="nx">express</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">require</span><span class="p">(</span><span class="s2">&quot;express&quot;</span><span class="p">);</span>
+</span><span id="__span-3-2"><a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a><span class="kd">const</span><span class="w"> </span><span class="nx">app</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">express</span><span class="p">();</span>
+</span><span id="__span-3-3"><a id="__codelineno-3-3" name="__codelineno-3-3" href="#__codelineno-3-3"></a>
+</span><span id="__span-3-4"><a id="__codelineno-3-4" name="__codelineno-3-4" href="#__codelineno-3-4"></a><span class="kd">const</span><span class="w"> </span><span class="nx">data</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-3-5"><a id="__codelineno-3-5" name="__codelineno-3-5" href="#__codelineno-3-5"></a><span class="w">  </span><span class="nx">title</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;EJS Guide&quot;</span><span class="p">,</span>
+</span><span id="__span-3-6"><a id="__codelineno-3-6" name="__codelineno-3-6" href="#__codelineno-3-6"></a><span class="w">  </span><span class="nx">heading</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;Welcome to EJS Guide Website!&quot;</span><span class="p">,</span>
+</span><span id="__span-3-7"><a id="__codelineno-3-7" name="__codelineno-3-7" href="#__codelineno-3-7"></a><span class="w">  </span><span class="nx">message</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;This is a sample EJS template.&quot;</span><span class="p">,</span>
+</span><span id="__span-3-8"><a id="__codelineno-3-8" name="__codelineno-3-8" href="#__codelineno-3-8"></a><span class="p">};</span>
+</span><span id="__span-3-9"><a id="__codelineno-3-9" name="__codelineno-3-9" href="#__codelineno-3-9"></a>
+</span><span id="__span-3-10"><a id="__codelineno-3-10" name="__codelineno-3-10" href="#__codelineno-3-10"></a><span class="nx">app</span><span class="p">.</span><span class="nx">set</span><span class="p">(</span><span class="s2">&quot;view engine&quot;</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;ejs&quot;</span><span class="p">);</span>
+</span><span id="__span-3-11"><a id="__codelineno-3-11" name="__codelineno-3-11" href="#__codelineno-3-11"></a>
+</span><span id="__span-3-12"><a id="__codelineno-3-12" name="__codelineno-3-12" href="#__codelineno-3-12"></a><span class="nx">app</span><span class="p">.</span><span class="nx">get</span><span class="p">(</span><span class="s2">&quot;/&quot;</span><span class="p">,</span><span class="w"> </span><span class="p">(</span><span class="nx">req</span><span class="p">,</span><span class="w"> </span><span class="nx">res</span><span class="p">)</span><span class="w"> </span><span class="p">=&gt;</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-3-13"><a id="__codelineno-3-13" name="__codelineno-3-13" href="#__codelineno-3-13"></a><span class="w">  </span><span class="nx">res</span><span class="p">.</span><span class="nx">render</span><span class="p">(</span><span class="s2">&quot;index&quot;</span><span class="p">,</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="nx">data</span><span class="w"> </span><span class="p">});</span>
+</span><span id="__span-3-14"><a id="__codelineno-3-14" name="__codelineno-3-14" href="#__codelineno-3-14"></a><span class="p">});</span>
+</span><span id="__span-3-15"><a id="__codelineno-3-15" name="__codelineno-3-15" href="#__codelineno-3-15"></a>
+</span><span id="__span-3-16"><a id="__codelineno-3-16" name="__codelineno-3-16" href="#__codelineno-3-16"></a><span class="nx">app</span><span class="p">.</span><span class="nx">listen</span><span class="p">(</span><span class="mf">8080</span><span class="p">,</span><span class="w"> </span><span class="p">()</span><span class="w"> </span><span class="p">=&gt;</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-3-17"><a id="__codelineno-3-17" name="__codelineno-3-17" href="#__codelineno-3-17"></a><span class="w">  </span><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s2">&quot;Server is listening on port 8080&quot;</span><span class="p">);</span>
+</span><span id="__span-3-18"><a id="__codelineno-3-18" name="__codelineno-3-18" href="#__codelineno-3-18"></a><span class="p">});</span>
 </span></code></pre></div>
 <p>In this code, we:</p>
 <ul>
-<li>Require the express module and create a new instance of an express app.</li>
-<li>Require the data from our data.js file.</li>
-<li>Set the view engine to EJS.</li>
-<li>Create a new route that renders our index.ejs file and passes in the data from data.js.</li>
-<li>Start the server on port 3000 and log a message to the console.</li>
+<li>
+<p><code>const express = require("express");</code></p>
+<ul>
+<li>This line imports the express module, which is a popular framework for building web applications in Node.js.</li>
+</ul>
+</li>
+<li>
+<p><code>const app = express();</code></p>
+<ul>
+<li>This creates an instance of the express application.</li>
+</ul>
+</li>
+<li>
+<p><code>const data = {
+  title: "EJS Guide",
+  heading: "Welcome to EJS Guide Website!",
+  message: "This is a sample EJS template.",
+};</code> </p>
+<ul>
+<li>This creates an object called data that contains some information that will be used to render a web page.</li>
+</ul>
+</li>
+<li>
+<p><code>app.set("view engine", "ejs");</code></p>
+<ul>
+<li>This line tells the express application to use the EJS template engine for rendering views. EJS stands for Embedded JavaScript, which is a popular template language for building web pages.</li>
+</ul>
+</li>
+<li>
+<p><code>app.get("/", (req, res) =&gt; {
+  res.render("index", { data });
+});</code></p>
+<ul>
+<li>
+<p>This sets up a route handler for the root URL of the application ("/"). When a client requests this URL, the app.get() function will be called. This function takes two arguments: a callback function and an object. The callback function takes two arguments: req (short for "request") and res (short for "response"). The req object represents the HTTP request that the client sent, and the res object represents the HTTP response that the server will send back to the client.</p>
+</li>
+<li>
+<p>Inside the callback function, the res.render() function is called, which tells express to render the "index" view using the data object we defined earlier. The "index" view is an EJS template that will be used to generate the HTML that will be sent back to the client.</p>
+</li>
+</ul>
+</li>
+<li>
+<p><code>app.listen(8080, () =&gt; {
+  console.log("Server is listening on port 8080");
+});</code></p>
+<ul>
+<li>This starts the express application and listens for incoming HTTP requests on port 8080. When the server starts up, it will log a message to the console to let you know that it's running.</li>
+</ul>
+</li>
 </ul>
 <h2 id="start-the-server">Start the server</h2>
-<p>In the terminal, run the following command to start the server:</p>
-<div class="language-text highlight"><pre><span></span><code><span id="__span-3-1"><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a>node app.js
+<p>In the terminal in your Visual Studio Code, run the following command to start the server:</p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-4-1"><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a>node app.js
 </span></code></pre></div>
 <details class="success" open="open">
 <summary>Success</summary>
-<p>Now, visit "http://localhost:3000"</p>
+<p>Now, visit "http://localhost:8080"</p>
 </details>
 <h2 id="outcome">Outcome</h2>
 <p><img alt="npm i" src="../images/image1.png" /></p>
